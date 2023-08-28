@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Forms</title>
+</head>
+
+<body>
+    <script type = "text/javascript">
+        <!--
+     // Form validation code will come here.
+     function validate() {
+     
+        if( document.myForm.Name.value == "" ) {
+           alert( "Please provide your name!" );
+           document.myForm.Name.focus() ;
+           return false;
+        }
+        if( document.myForm.EMail.value == "" ) {
+           alert( "Please provide your Email!" );
+           document.myForm.EMail.focus() ;
+           return false;
+        }
+        if( document.myForm.Zip.value == "" || isNaN( document.myForm.Zip.value ) ||
+           document.myForm.Zip.value.length != 5 ) {
+           
+           alert( "Please provide a zip in the format #####." );
+           document.myForm.Zip.focus() ;
+           return false;
+        }
+        if( document.myForm.Country.value == "-1" ) {
+           alert( "Please provide your country!" );
+           return false;
+        }
+        return( true );
+     }
+  //-->
+</script>
+    <form action="submit.html" name = "myForm" target="_blank" onsubmit = "return(validate());"> 
+    <h2>QUERY FORM</h2>
+    <form action="backend.php">
+        <label for="name"> Name</label>
+        <div>
+            <input type="text" name="myName" id="name">
+        </div>
+        <br>
+        <div>
+            Role: <input type="text" name="myRole">
+        </div>
+        <br>
+        <div>
+            Email: <input type="email" name="myEmail">
+        </div>
+
+        <br>
+        <div>
+            Date: <input type="date" name="myDate">
+        </div>
+        <br>
+        <div>
+            Bonus: <input type="number" name="myBonus">
+        </div>
+        <br>
+        
+        <br>
+        <div>
+            Gender: Male <input type="radio" name="myGender"> Female <input type="radio" name="myGender">
+            Other <input type="radio" name="myGender">
+        </div>
+
+        <br>
+        <div>
+            Write your query for product: <br><textarea name="myText" cols="90" rows="10"></textarea>
+        </div>
+
+        <br>
+      
+        <br>
+
+        <div>
+            <input type="submit" value="Submit Now">
+            <input type="reset" value="Reset Now">
+        </div>
+    </form>
+</body>
+
+</html>
